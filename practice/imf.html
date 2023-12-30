@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .container .box:hover .imgBox{
+        transform: translate(-1.5rem, -1.5rem); 
+    }
+    .container .box:hover .content{
+         transform: translate(3.5rem, 3.5rem);
+      }
+
+    .imgBox{
+        top: 0;
+        left: 0;
+        z-index: 2;
+        transition: all 0.5s ease-in-out;
+    }
+    .content{
+        z-index: 1;
+        transition: all 0.5s ease-in-out;
+
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="imgBox">
+                <img src="https://unsplash.com/1400x400/?code,nature" alt="">
+            </div>
+            <div class="content">
+                <h2>
+                    nvhfhd
+                    <span>jhsbhhqh</span>
+                </h2>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

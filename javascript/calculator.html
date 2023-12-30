@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+
+        .container{
+            position: absolute;
+            top: 200px;
+            left: 600px;
+            box-shadow: 2px 2px 2px(red);
+            width: 300px;
+            height: 300px;
+            background-color: #bababa;
+        }
+        button{
+            margin: 5px;
+            width: 60px;
+            position: relative;
+            top: 20px;
+            align-items: center;
+        }
+        input{
+            width: 80%;
+            margin-left: 20px;
+            padding: 10px;
+        }
+    </style>
+<body>
+    <div class="container">
+    <center><h3>CALCULATOR</h3></center>
+    <input type="text" id="display" readonly>
+    <br>
+    <button onclick="addToDisplay('7')">7</button>
+    <button onclick="addToDisplay('8')">8</button>
+    <button onclick="addToDisplay('9')">9</button>
+    <button onclick="addToDisplay('+')">+</button>
+    <br>
+
+    <br>
+    <button onclick="addToDisplay('4')">4</button>
+    <button onclick="addToDisplay('5')">5</button>
+    <button onclick="addToDisplay('6')">6</button>
+    <button onclick="addToDisplay('-')">-</button>
+    <br>
+
+    <br>
+    <button onclick="addToDisplay('1')">1</button>
+    <button onclick="addToDisplay('2')">2</button>
+    <button onclick="addToDisplay('3')">3</button>
+    <button onclick="addToDisplay('*')">*</button>
+    <br>
+
+    <br>
+    <button onclick="addToDisplay('0')">0</button>
+    <button onclick="clearDisplay()">C</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="addToDisplay('/')">/</button>
+    <br>
+</div>
+
+
+    <script>
+        function addToDisplay(value){
+            document.getElementById('display').value += value;
+        }
+
+        function clearDisplay(){
+            document.getElementById('display').value ="";
+
+        }
+
+        function calculate(){
+            try{
+                const result=eval(document.getElementById("display").value);
+                document.getElementById('display').value = result;
+            } catch(error){
+                document.getElementById('display').value ="error";
+            }
+        }
+        
+    </script>
+    
+</body>
+</html>

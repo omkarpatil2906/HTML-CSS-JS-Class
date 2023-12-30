@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="btn()">Click</button>
+
+    <button onclick="this.innerHTML = Date()">Select date</button>
+
+    <script>
+        function btn(){
+            console.log('hii')
+        }
+        btn();
+
+        for(var i=0; i<=100; i++){
+            
+            if(i === 50){
+                break;
+            }      
+            console.log(i)
+        }
+        var counter = 0;
+        // Execute the code block at least once and then check the condition
+        do {
+            console.log("This code will run at least once. Counter: " + counter);
+            counter++;
+        } while (counter < 23);
+
+        var numbers = [1, 2, 3, 4, 5];
+
+        // Define a function to be executed for each element
+        function processNumber(number) {
+        console.log("Number:", number);
+        }
+
+        // Use forEach to iterate over the array
+        numbers.forEach(processNumber);
+       
+        var numbers = [1, 2, 3, 4, 5];
+        var sum = numbers.reduce(function(accumulator, currentValue) {
+        return accumulator + currentValue;
+        }, 0);
+        console.log(sum)
+    </script>
+    
+</body>
+</html>

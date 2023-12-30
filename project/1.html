@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+     * { 
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+  
+   body{
+    background-color: #d3d3d3;
+    font-family: 'Ubuntu', sans-serif;
+   }
+   .navbar{
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+   }
+  
+    .u1{
+        display: flex;
+        font-size: 10px;
+        list-style: none;
+        background-color: #350d32d1;
+        padding: 20px;     
+        
+    }
+    li{
+        margin: 0px 10px ;
+        font-size: 18px;    
+        color: aliceblue;  
+        cursor: pointer; 
+    }
+    .s1{
+        margin-left: 765px;
+    }
+
+    .container{
+        border: 1px solid black;
+        width: 27%;
+        height: 0%;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 18px;
+        background-color: white;
+        /* border-radius: 8px; */
+        /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 8px 16px rgba(0, 0, 0, 0.1); */
+        margin: 130px 583px;
+        padding-bottom: 10px;
+
+    }
+    h2{
+       
+        text-align: center;
+        background-color: #350d32d1;
+        color: white;
+        padding: 15px;
+        margin-top: 0px;
+    }
+    .c2{
+        padding: 10px;
+        margin: -5px 55px 0px;
+    }
+    legend{
+        margin: 8px;
+        margin-left: -1px;
+    }
+    input[type="email"], input[type="password"]{
+        width: 100%;
+        padding: 8px;
+    }
+    .b1{
+        width: 97%;
+        font-size: 20px;
+        background-color:  #350d32d1;
+        cursor: pointer;
+        color: aliceblue;
+        padding: 6px;
+        font-family: 'Ubuntu', sans-serif;
+        margin-left: 2px;
+
+    }
+    .l2{
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    .c3{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main{
+        display: flex;
+    }
+    .card1{
+        width: 50%;
+        height: 100%;
+
+    }
+    .card2{
+        width: 50%;
+        height: 324px;
+    }
+    .about{
+        position: relative;
+        top: 2%;
+        left: 20%;
+        text-align: center;
+    }
+    .gallery{
+        position: relative;
+        top: 80%;
+    }
+
+    .container1{
+        display: flex;
+        justify-content: space-between;
+       margin: 0px 50px;
+    }
+
+    .box{
+        width: 400px;
+        height: 400px;
+    }
+
+    header{
+        background-color: #350d32d1;
+        width: 100%;
+    }
+
+    .socials{
+        display: flex;   
+        background-color: #350d32d1;
+        width: 100%;
+        height: 200px;
+    }
+
+    .socials li{
+        margin-top: 80px;
+        list-style: none;
+    }
+
+     .fa-facebook{
+        padding: 8px;
+        font-size: 19px;
+        width: 27px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px;
+        letter-spacing: 5px;
+        
+    }
+    .fa-twitter {
+        padding: 8px;
+        padding-right: 23px;
+        font-size: 19px;
+        width: 27px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 9px;
+        letter-spacing: 5px;
+        
+    }
+    .fa-google {
+        padding: 8px;
+        padding-right: 23px;
+        font-size: 19px;
+        width: 27px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px;
+        letter-spacing: 5px;
+        
+    }
+    .fa-instagram {
+        padding: 8px;
+        padding-right: 23px;
+        font-size: 19px;
+        width: 27px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px;
+        letter-spacing: 5px;
+        
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+    } 
+    .fa-google {
+        background: #f5411d;
+        color: rgb(255, 255, 255);
+    }
+    .fa-instagram {
+        background: #ff009d;
+        color: rgb(255, 255, 255);
+    }
+
+    .f2 a{
+        margin: 20px;
+    }
+
+
+
+    
+       
+  
+
+</style>
+<body>
+    <div class="navbar" >
+        <ul class="u1">
+            <li> <a href="#g2" style="color: #fff; text-decoration: none;">Home</a></li>
+            <li> <a href="#ab1" style="color: #fff; text-decoration: none;">About</a></li>
+            <li>Contact_Us</li>
+            <li> <a href="#g1" style="color: #fff; text-decoration: none;">Gallery</a></li>
+            <li class="s1"><input type="text" placeholder="Search" style="padding: 0px;"></li>
+            <li> <button>search</button></li>
+        </ul>
+    </div>
+
+<section id="g2"><br><br><br>
+    
+    <div class="container">
+        <form action="" onsubmit="return validateForm()">
+        <div class="c1">
+        <h2>L O G I N</h2>
+        <div class="c2">
+        <legend>Email</legend>
+        <input type="email" id="email"><br><br>
+        <legend>Password</legend>
+        <input type="password" id="password">
+        <legend><a href="#" style="font-size: 15px;">Forget Password</a></legend><br>
+        <button class="b1">LOGIN</button>
+        <legend class="l2">New to our platform? <a href="form.html">SignUp</a></legend>      
+        <br><br>      
+    </div>
+
+    </div>
+</form>
+    </div>
+    <hr>
+    <br><br>
+</section>
+
+<!-- Gallery -->
+
+<section id="g1"><br><br><br>
+<center><h1 style="font-size: 40px; color: #350d32d1; margin: 50px;">GALLERY</h1></center>
+    <div class="container1" id="ab5">
+        <div class="box"><img src="./dog-sickness-te-220822-4ce387.jpg" width="100%"  alt=""></div>
+        <div class="box"><img src="./premium_photo-1675848493910-5474ee04c3e3.jpeg" width="100%"  alt=""></div>
+        <div class="box"><img src="./5200.jpg" width="100%" height="270px"  alt=""></div>
+    </div>
+    <div class="container1">
+        <div class="box"><img src="./pexels-cottonbro-studio-5473298.jpg" width="100%"  alt=""></div>
+        <div class="box"><img src="./pexels-cottonbro-studio-5473298.jpg" width="100%"  alt=""></div>
+        <div class="box"><img src="./pexels-cottonbro-studio-5473298.jpg" width="100%"  alt=""></div>
+    </div>
+</section>
+
+<hr>
+
+
+     <div class="main" id="ab1">
+        <div class="card1">
+        <h1 style="text-align: center; font-size: 55px; color: #350d32d1; padding: 20px ; margin-left: 280px; ">ABOUT US</h1>
+        <p class="about">The About Us page of your website is an essential source of information for all who want to know more about your business.About Us pages are where you showcase your history, what is unique about your work, your company’s values, and who you serve.The design, written content, and visual or video elements together tell an important story about who you are and why you do it. The About Us page of your website is an essential source of information for all who want to know more about your business.About Us pages are where you showcase your history, what is unique about your work, your company’s values, and who you serve.The design, written content, and visual or video elements together tell an important story about who you are and why you do it. The About Us page of your website is an essential source of information for all who want to know more about your business.About Us pages are where you showcase your history, what is unique about your work, your company’s values, and who you serve.The design, written content, and visual or video elements together tell an important story about who you are and why you do it.</p>
+     </div>
+     <div class="card2">
+        <img src="./PhotoRoom-20230822_200910.png" width="100%"  alt="">
+     </div>
+    </div><br><br>
+      
+     <footer>
+        <div class="socials">
+         <div class="f1" style="margin-top: 20px; margin-left: 500px;">
+            <center><h5 style="color: white; font-size: 30px; letter-spacing: 10px; margin-left: 123px; ">FOLLOW US</h5></center>
+            <div class="f2" style="display: flex; margin-top: 20px; margin-left: 124px;">
+            <a href="#" class="fa fa-facebook"></a><br>
+            <a href="#" class="fa fa-twitter"></a><br>
+            <a href="#" class="fa fa-google"></a><br>
+            <a href="#" class="fa fa-instagram"></a><br>
+        </div>
+        <legend  style="margin-left: 90px; color: #fff;">@Copyright_content</legend>
+          </div>
+        </div>
+     </footer>
+
+
+     <script>
+        function validateForm()
+        {
+
+            const passwordInput = document.getElementById("password");
+            
+            // Get the password value from the input field
+            const password = passwordInput.value;
+            
+            // Define the password criteria
+            const minLength = 8;
+            const hasUppercase = /[A-Z]/.test(password);
+            const hasLowercase = /[a-z]/.test(password);
+            const hasNumber = /\d/.test(password);
+
+            // Check if the password meets all criteria
+            if (password.length >= minLength && hasUppercase && hasLowercase && hasNumber) {
+                errorMsg.textContent = ""; // Clear error message
+            } else {
+                errorMsg.textContent = "Password must meet the following criteria:\n" +
+                    "- At least 8 characters\n" +
+                    "- At least one uppercase letter\n" +
+                    "- At least one lowercase letter\n" +
+                    "- At least one number";
+            }
+
+            
+            const emailInput = document.getElementById("email");
+            const errorMsg = document.getElementById("error-msg");
+            
+            // Regular expression for email validation
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            
+            const email = emailInput.value;
+            
+            if (emailPattern.test(email)) {
+                errorMsg.textContent = ""; // Clear error message
+            } else {
+                errorMsg.textContent = "Invalid email address";
+            }
+            
+        }
+     </script>
+</body>
+</html>

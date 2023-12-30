@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form onsubmit="return validateForm()">
+        <input type="number" id="n1">
+        <button>click</button>
+    </form>
+   
+    <script>
+
+        function validateForm(){
+        const ticket = new Promise((resolve, reject) => {
+        const a = document.getElementById("n1").value;
+            if(a >= 18){
+                resolve("You are  eligible for vote")
+            }else{
+                reject("You are not eligible for vote")
+            }
+        });
+    
+
+        ticket.then((data) =>{
+            console.log("ohhhh", data)
+        })
+
+
+        ticket.catch((result)=>{
+            console.log("ohhh no" , result)
+        })
+
+        return false;
+    }
+   
+    </script>
+</body>
+</html>

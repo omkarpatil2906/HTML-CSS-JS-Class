@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return validateForm()">
+        <legend>Name:</legend>
+        <input type="text" id="fname" placeholder="Enter a name">
+        <legend>Number</legend>
+        <input type="number" id="phno" placeholder="Enter a Phone Number"><br>
+    
+        <button >Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("fname").value.trim();
+            var phone = document.getElementById("phno").value.trim();
+            
+            if(name.length == 0){
+                alert('plz enter a number');
+                return false;
+            }
+        }
+       
+        
+    
+    </script>
+
+</body>
+</html>

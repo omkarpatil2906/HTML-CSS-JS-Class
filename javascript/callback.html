@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function xyz(name, city, phoneNo, gmail){
+            alert('ente Name'+ name + ' enter City '+ city + 'EnterphoneNo' +phoneNo+ 'Enter Gmail'+gmail)
+        }
+
+
+        function abc(callback){
+            name=prompt('enter a name');
+            city=prompt('enter a city');
+            phoneNo=prompt('enter a number');
+            gmail=prompt('enter a gmail');
+            
+           callback(name, city, phoneNo, gmail)
+        }
+        abc(xyz);
+        
+
+       
+    </script>
+</body>
+</html>

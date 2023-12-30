@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p>First Number <input id="id1"></p>
+    <p>Second Number <input id="id2"></p>
+    <p>Third Number <input type="text" id="id3"></p>
+    <button onclick="add()">Add</button>
+    <p>Sum= <input id="answer"></p> -->
+    <button onclick="func()">Click</button>
+    <p id="p1"></p>
+
+</body>
+
+<script>
+    // function add(){
+    //     var num1, num2, num3, sum;
+    //     num1 = document.getElementById("id1").value;
+    //     num2 = document.getElementById("id2").value;
+    //     num3 = document.getElementById("id3").value;
+
+    //     sum= num1 + num2 + num3;
+    //     document.getElementById("answer").value = sum;
+
+    // }
+
+    function outer(){
+        let counter = 11
+        function inner(){
+            counter ++;
+            console.log(counter);
+            return counter;
+        }
+        return inner;
+    }
+    const fn1 = outer();
+
+    function func(){
+        // console.log("count=");
+        document.getElementById("p1").innerHTML = fn1();
+    }
+   
+
+
+
+    
+</script>
+</html>

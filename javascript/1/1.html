@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #bulb{
+        width: 330px;
+        height: 330px;
+        border-radius: 50%;   
+        border: 2px solid black;
+    }
+    button{
+        margin: 80px;
+    }
+</style>
+<body>
+    <div id="bulb">
+
+    </div>
+    <button>Ok</button>
+    <script>
+      var bulb = document.querySelector("#bulb");
+      var btn = document.querySelector("button");
+
+      var flag = 0
+     btn.addEventListener("click", function(){
+        if(flag == 0 ){
+            bulb.style.backgroundColor = "red";
+            flag=1
+        }  else if(flag == 1){
+            bulb.style.backgroundColor = "yellow";
+            flag = 2
+        }
+        else if(flag == 2){
+            bulb.style.backgroundColor = "green";
+            flag = 3
+        }
+        else if(flag == 3){
+            bulb.style.backgroundColor = "orange";
+            flag = 0
+        }
+    
+     })
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var studentName = prompt("Enter  a name");
+        var marks = prompt("enter a mark");
+
+
+        var grade;
+        
+
+        if (marks >= 90) {
+        grade = "A+";
+        }
+
+        else if (marks >= 80) {
+        grade = "A";
+        }
+
+        else if (marks >= 70) {
+        grade = "B";
+        } 
+
+        else if (marks >= 60) {
+        grade = "C";
+        } 
+
+        else if (marks >= 50) {
+        grade = "D";
+        } 
+        
+        else {
+        grade = "F";
+        }
+
+
+        document.write("Student Name: " + studentName);
+        document.write("Marks: " + marks);
+        document.write("Grade: " + grade);
+
+
+    </script>
+   
+</body>
+</html>

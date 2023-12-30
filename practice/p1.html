@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viewport Size Detection</title>
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+        // Function to handle changes in viewport size
+        function handleViewportChange() {
+            var outputDiv = document.getElementById("output");
+            if (window.innerWidth <= 768) {
+                // Display a message for small screens (viewport width <= 768px)
+                outputDiv.textContent = "Small screen detected";
+            } else {
+                // Display a message for larger screens
+                outputDiv.textContent = "Large screen detected";
+            }
+        }
+
+        // Add an event listener for window resize
+        window.addEventListener("resize", handleViewportChange);
+
+        // Call the function initially to set the initial state
+        handleViewportChange();
+    </script>
+</body>
+</html>

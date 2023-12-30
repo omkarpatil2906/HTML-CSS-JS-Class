@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a = [2, 3, 4, 5 ,6];
+        // 1)adding method
+
+        console.log('push:');
+        a.push(22)        //Adds elements to the end of the array.
+        console.log(a)
+
+        console.log('unshift:');
+        a.unshift(12)     //Adds elements to the beginning of the array.
+        console.log(a)
+
+        //2)removing method 
+        console.log('pop:');
+        a.pop()            // Removes and returns the last element.
+        console.log(a)
+
+        console.log('shift:');
+        a.shift()          //Removes and returns the first element.
+        console.log(a)
+
+        b=[1,3,4,5,6,7,8] 
+
+        console.log('splice:');   
+        b.splice(3,3)            // Removes elements from anywhere in the array based on their index.
+        console.log(b)           //first value will reprsent no of index. second value will remove the no of index where the first index value is completed. ex 1; (3 ,1)  only 5 will be remove.  ex 2; (3 ,2) after 3 if you put 2 then 5 and 6 will be remove 
+      
+        //3)modifying element
+        console.log('modifying:');
+        a[1]=34;             // You can update or modify elements in an array by assigning new values to specific indices.
+        console.log(a)
+
+        //4) filter and map
+        const age =[12, 23, 13, 18, 15, 34, 30];
+        
+        console.log('Filter')              //Creates a new array with elements that pass a test.
+        const ab1 = age.filter(element => element >= 18)
+        console.log(ab1);
+ 
+        console.log("Map:")
+        let ac1 = age.map(num => num * 2);   //when ** is use then array element will be square
+        console.log(ac1);
+
+        //
+        console.log('slice:')            //Use slice to create a shallow copy of an array.
+        var ab3 = age.slice(3,6)
+        console.log(ab3);
+        
+        // 5)iterating through out element
+
+        var  ary1 = [ 1, 2, 3, 4, 5, 6]
+        console.log('for:')
+        for( i=1; i<ary1.length; i++){
+            console.log(ary1[i]);
+        }
+
+        console.log('forEach:');
+        ary1.forEach(function(element){
+            console.log(element);
+        });
+
+        // 6) sorting
+
+        ary2 = [2, 3, 5, 8, 7, 44, 1 ,67, 23]
+
+        console.log('sort:');
+
+        ary2.sort()
+        ary2.sort(function(a, b)
+        {
+            return a-b;
+        });
+        console.log(ary2);
+
+        // 7)searching 
+
+        var age1 = [ 2, 1, 12, 14, 3, 8, 15, 56, 34, 23]
+
+        console.log('find:');
+        const abc = age1.find(element => element >= 14)
+        console.log(abc);
+
+        console.log('indexOf:');
+        const abc1 = age1.indexOf(14);
+        console.log(abc1);
+
+        console.log('Findindex:');
+        const abc2 = age1.findIndex(function(element){        //greater than 14 
+            return element > 14;
+        })
+
+        console.log(abc2);
+
+        //8) Merging and Combining Arrays
+
+        let array1 = [1, 2, 3];
+        let array2 = [4, 5, 6];
+        let array3 = [7, 8, 9];
+
+        console.log("Concat:")
+        let comb = array1.concat(array2);
+        console.log(comb)
+
+        //advance 
+        // 1. Removing Duplicates from an Array
+        // You can remove duplicates from an array using the filter method along with the indexOf method:
+
+        console.log('Removing Duplicates from an Array:')
+        var org = [1, 2, 3, 4, 2, 5, 3, 4]
+        var fn = org.filter((element, index, arr) => arr.indexOf(element) == index)
+        console.log(fn);
+
+        console.log('Flattening a Multi-dimensional Array:')
+        let multiArray = [[1, 2], [3, 4], [5, 6]];
+        let flatArray = multiArray.reduce((acc, current) => acc.concat(current), []);
+        console.log(flatArray); 
+         
+       console.log('Grouping Array Elements by a Property:')
+        let people = [
+            { name: "Alice", age: 25 },
+            { name: "Bob", age: 30 },
+            { name: "Charlie", age: 25 },
+        ];
+
+        let groupedByAge = people.reduce((acc, person) => {
+            let key = person.age;
+            (acc[key] || (acc[key] = [])).push(person);
+            return acc;
+         }, {});
+
+         console.log(groupedByAge);
+
+    </script>
+</body>
+</html>

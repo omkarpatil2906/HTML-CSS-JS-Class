@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       const text = "Happy Birthday";
+       const letterToCount = "a";
+
+       const count = text.split('').reduce((acc, char) => acc + (char === letterToCount), 0);
+
+       console.log(`The letter "${letterToCount}" appears ${count} times in the text.`);
+
+
+        // const a = ["apple", "car", "abcd","cricket"];
+        // const b = a.filter((str) => str.length > 4);
+
+        // console.log(b);const text = "Happy Birthday";
+        // const lettersToCount = ["a", "p", "y"];
+
+        // const letterCounts = lettersToCount.reduce((counts, letter) => {
+        //   counts[letter] = text.split('').reduce((acc, char) => acc + (char === letter), 0);
+        //   return counts;
+        // }, {});
+
+        // console.log(letterCounts);
+
+
+
+
+        
+        
+    </script>
+</body>
+</html>

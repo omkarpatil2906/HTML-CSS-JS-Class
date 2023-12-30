@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="id1">
+    <input type="text" id="id2" value="">
+    <input type="text" id="id3" value="">
+    <button onclick="addDataToTable()">Add to Table</button>
+
+    <table id="myTable">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+    </table>
+
+    <script>
+        function addDataToTable(){
+            var a= document.getElementById("id1").value;
+            var b= document.getElementById("id2").value;
+            var c=  document.getElementById("id3").value;
+
+            var table=document.getElementById("myTable");
+            var newRow=table.insertRow(table.rows.length);
+
+            var cell1=newRow.insertCell();
+            var cell2=newRow.insertCell();
+            var cell3=newRow.insertCell();
+
+            cell1.innerHTML=a;
+            cell2.innerHTML=b;
+            cell3.innerHTML=c;
+
+            // Clear input fields after adding data
+            document.getElementById("id1").value = "";
+            document.getElementById("id2").value = "";
+            document.getElementById("id3").value = "";
+            } 
+    </script>
+</body>
+</html>

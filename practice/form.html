@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .container-flex{
+            /* display: inline-block; */
+            background-color: rgb(225, 205, 205);
+            padding: 20px 30px;
+            
+            margin-top: 40px;
+            margin-left: 590px;
+            margin-right: 550px ;
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 20px;
+            
+        }
+        /* .form-group label{
+            font-style: bold; */
+        
+        
+        button{
+            background-color: #6a430a;
+            margin-left: 100px;
+            color: aliceblue;
+            cursor: pointer;
+        
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="container-flex">
+    <h1>Login Form</h1>
+    <form action="" method="get" onsubmit="return validateForm()">
+        <div class="form-group">
+        <label for="">First Name</label>
+        <input type="text" id="firstName" placeholder="Enter First Name">
+        <br>
+        <br>
+
+        <label for="">Middle Name</label>
+        <input type="text" id="middleName" placeholder=" Enter Middle Name">
+        <br>
+        <br>
+
+        <label for="">Last Name</label>
+        <input type="text" id="lastName" placeholder=" Enter Last Name">
+        <br>
+        <br>
+
+        <label for="">Gmail</label>
+        <input type="gmail" id="gmail" placeholder=" Enter a Gmail">
+        <br>
+        <br>
+
+        <label for="">Phone No</label>
+        <input type="number" id="phone" placeholder=" Enter Phone number">
+        <br>
+        <br>
+
+        <label for="" class="p1">Password</label>
+        <input type="password" id="password" placeholder="Enter a Password">
+        <br>
+        <br>
+        <label for="">Date of Birth</label>
+        <input type="date"  id="dateOfBirth" placeholder="please enter a Date of Birth ">
+        <br><br>
+        
+        <label > Gender </label>
+            <input type="radio" id="male" name="radio"> male
+            <input type="radio" id="female" name="radio"> female
+        <br><br>
+        <input type="checkbox" id="checkbox1"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, rerum.
+        <br> <br>
+        <input type="checkbox" id="checkbox2"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, rerum.
+        <br> <br>
+        <button >Submit</button>
+        <br>
+        </div>
+    </form>
+
+   <script>
+       function validateForm() {
+            var firstName = document.getElementById("firstName").value.trim();
+            var middleName = document.getElementById("middleName").value.trim();
+            var lastName = document.getElementById("lastName").value.trim();
+            var gmail = document.getElementById("gmail").value.trim();
+            var phone = document.getElementById("phone").value.trim();
+            var password = document.getElementById("password").value.trim();
+            var dateOfBirth = document.getElementById("dateOfBirth").value.trim();
+            var maleRadio = document.getElementById("male");
+            var femaleRadio = document.getElementById("female");
+
+            if (firstName.length === 0 || middleName.length === 0 || lastName.length === 0 ||
+                gmail.length === 0 || phone.length === 0 || password.length === 0 ||
+                dateOfBirth.length === 0 || (!maleRadio.checked && !femaleRadio.checked)) {
+                alert('Please fill in all fields and select a gender.');
+                return false;
+            }
+        }
+   </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .hidden{
+        display: none;
+    }
+</style>
+<body>
+     <button id="id1">TOGGLE CONTENT</button>
+     <br>
+     <br>
+     <div id="content" class="hidden">
+        This is hidden content. Click the button to show/hide
+     </div>
+
+     <script>
+        const toggleButton = document.getElementById('id1');
+        const content = document.getElementById("content");
+        toggleButton.addEventListener("click", function(){
+          content.classList.toggle("hidden"); 
+        });
+     </script>
+     
+</body>
+</html>

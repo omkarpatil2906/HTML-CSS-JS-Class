@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="myform" method="post" onsubmit="return validateForm()" >
+        Name:<input type="text" name="fname" >
+        <p id="id1"></p>
+        First Name<input type="text" name="firstName" ><br>
+        <p id="id2"></p>
+        Middle Name<input type="text" name="middleName" ><br>
+        <p id="id3"></p>
+
+        Last Name<input type="text" name="lastName"><br>
+        <p id="id4"></p>
+
+        third Name<input type="text" name="thirdName"><br>
+        <p id="id5"></p>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm(){
+            var x = document.forms["myform"]["fname"].value;
+            var y = document.forms["myform"]["firstName"].value;
+            var z = document.forms["myform"]["middleName"].value;
+            var a = document.forms["myform"]["lastName"].value;
+            var b = document.forms["myform"]["thirdName"].value;
+
+            // var res = (a=="" || b=="" || x==""|| y==""|| z=="")?"plz  fill in the proper":""
+            // alert(res);
+            // return false;
+
+            if(x ==""){
+                // alert("please enter a fname");
+                document.getElementById('id1').innerHTML="name must be fiiled out"
+                document.getElementById('id1').style.color="red"
+                return false;
+            }else if(y ==""){
+                // alert("please enter a firstName ");
+                document.getElementById('id2').innerHTML="Fisrt name must be fiiled out"
+                document.getElementById('id2').style.color="red"
+                return false;
+            }
+            else if(z ==""){
+                // alert("please enter a middletName ");
+                z= document.getElementById('id3').innerHTML="Middle name must be fiiled out"
+                z= document.getElementById('id3').style.color="red"
+                return false;
+            }else if(a ==""){
+                // alert("please enter a lastName ");
+                a= document.getElementById('id4').innerHTML="last name must be fiiled out"
+               a= document.getElementById('id4').style.color="red"
+                return false;
+            }
+            else if(b ==""){
+                // alert("please enter a thirdName ");
+                b= document.getElementById('id5').innerHTML="third name must be fiiled out"
+               b= document.getElementById('id5').style.color="red"
+                return false;
+            }
+
+
+           
+
+            // return x===""?(alert("plz enter a name"),false)
+            // : y===""? (alert("plz enter first name"), false):true
+        }
+
+        
+    </script>
+</body>
+</html>
